@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="LinkedIn, bootstrap, clone">
+    <meta name="description" content="Clone of the LinkedIn Website made with Bootstrap!">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/260dc2fe64.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="materials/favicon.png">
+
+    <title>Feed | LinkedIn</title>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="border-bottom d-flex align-items-center justify-content-md-left gap-2 gap-lg-3 justify-content-lg-around sticky-top bg-white ps-2 pe-2 ps-lg-5 pe-lg-5">
+
+        <div class="d-flex align-items-center gap-2">
+            <img src="materials/logo.png" width="35">
+            <div id="search-bar" class="d-none d-lg-flex gap-2 p-2 align-items-center rounded-2">
+                <i id="search-icon" class="fas fa-search ms-3"></i>
+                <input id="search-input" class="bg-transparent border-0" type="text" placeholder="Search">
+            </div>
+        </div>
+
+
+
+        <div class="d-flex align-items-center gap-4">
+            <a href="" class="nav-items-active d-flex flex-column align-items-center">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-item-text d-none d-md-block">Home</span>
+            </a>
+            <a href="" class="nav-items d-flex flex-column align-items-center">
+                <i class="fas fa-user-friends nav-icon"></i>
+                <span class="nav-item-text d-none d-md-block">My Network</span>
+            </a>
+            <a href="" class="nav-items d-flex flex-column align-items-center">
+                <i class="fas fa-briefcase nav-icon"></i>
+                <span class="nav-item-text d-none d-md-block">Jobs</span>
+            </a>
+            <a href="" class="nav-items d-flex flex-column align-items-center">
+                <i class="fas fa-comment-dots nav-icon"></i>
+                <span class="nav-item-text d-none d-md-block">Messaging</span>
+            </a>
+            <a href="" class="nav-items d-flex flex-column align-items-center">
+                <i class="fas fa-bell nav-icon"></i>
+                <span class="nav-item-text d-none d-md-block">Notifications</span>
+            </a>
+            <a href="" class="nav-items d-flex flex-column align-items-center">
+                <img src="materials/user-1.png" class="rounded-circle" width="22">
+                <div class="d-flex align-items-center gap-1">
+                    <span class="nav-item-text d-none d-md-block">Me</span>
+                    <i class="fa-solid fa-caret-down d-none d-md-block"></i>
+                </div>
+            </a>
+
+            <div class="nav-right d-flex align-items-center gap-3 border-start">
+                <div class="nav-items d-flex flex-column align-items-center ms-3 cursor-pointer">
+                    <i class="fas fa-th nav-icon"></i>
+                    <div class="d-flex align-items-center gap-1">
+                        <span class="nav-item-text d-none d-md-block">Work</span>
+                        <i class="fa-solid fa-caret-down d-none d-md-block"></i>
+                    </div>
+                </div>
+                <span id="premium-link" class="font-12 cursor-pointer">Try Premium for free</span>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!--PROFILE-->
+            <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="profile-section border br-10">
+                    <div class="top-card border-bottom d-flex flex-column align-items-center">
+                        <img src="materials/github-sm-bg.png" class="card-img-top top-br-10" height="50">
+                        <img src="materials/user-1.png" class="rounded-circle border-2 border-primary mt-4 position-absolute" width="65">
+                        <div class="mt-5 mb-3 d-flex flex-column align-items-center">
+                            <span id="top-name" class="mt-3 fw-500 cursor-pointer">Hasan Solak</span>
+                            <span id="top-job" class="color-grey">Front-end Developer</span>
+                        </div>
+                        <div class="stat w-100 border-top">
+                            <div id="stat-1" class="stat-hover d-flex align-items-center justify-content-between ps-2 pe-2 pb-1 mt-3">
+                                <span class="text-middle font-12 color-grey fw-500">Who viewed your profile</span>
+                                <span class="number-middle font-12 fw-500">57</span>
+                            </div>
+                            <div id="stat-2" class="stat-hover d-flex align-items-center justify-content-between ps-2 pe-2 pb-1 mb-3">
+                                <span class="text-middle font-12 color-grey fw-500">Views of your post</span>
+                                <span class="number-middle font-12 fw-500">213</span>
+                            </div>
+                        </div>
+                        <div class="premium d-flex flex-column ps-2 pe-2 border-top cursor-pointer">
+                            <span class="font-12 color-grey mt-3">Access exclusive tools & insights</span>
+                            <span id="premium-text" class="font-12 fw-500">Get Hired Faster, Try Premium Free</span>
+                        </div>
+                        <div id="my-items" class="grey-hover d-flex align-items-end gap-2 pt-2 pb-3 ps-3 border-top w-100 cursor-pointer">
+                            <i class="fa-solid fa-bookmark mt-2"></i>
+                            <span class="font-12 fw-500 mt-2">My items</span>
+                        </div>
+                    </div>
+                </div>
+                <!--STICKY SIDEBAR - LEFT-->
+                <div id="sticky-left-sidebar" class="col-12 col-md-0 sticky-leftbar card mt-2 br-10">
+                    <span class="font-12 color-black text-start px-3 mt-3 mb-2">Recent</span>
+                    <div class="events">
+                        <div class="event px-3 cursor-pointer mb-1 grey-hover">
+                            <i class="fa-solid fa-users font-12 color-darker-grey fw-500"></i>
+                            <span class="font-12 color-darker-grey fw-500">Bogazici University MIS</span>
+                        </div>
+                        <div class="event px-3 cursor-pointer mb-1 grey-hover">
+                            <i class="fa-solid fa-calendar-day color-darker-grey fw-500"></i>
+                            <span class="font-12 color-darker-grey fw-500">React.js Tutorials By Ber...</span>
+                        </div>
+                        <div class="event px-3 cursor-pointer mb-1 grey-hover">
+                            <i class="fa-solid fa-users font-12 color-darker-grey fw-500"></i>
+                            <span class="font-12 color-darker-grey fw-500">BUchain Bootcamp</span>
+                        </div>
+                    </div>
+                    <span class="font-12 link-color link-hover cursor-pointer fw-500 px-3 mt-4 mb-2">Groups</span>
+                    <div class="groups">
+                        <div class="group px-3 cursor-pointer mb-1 grey-hover">
+                            <i class="fa-solid fa-users font-12 color-darker-grey fw-500"></i>
+                            <span class="font-12 color-darker-grey fw-500">Bogazici University MIS</span>
+                        </div>
+                        <div class="group px-3 cursor-pointer mb-1 grey-hover">
+                            <i class="fa-solid fa-users font-12 color-darker-grey fw-500"></i>
+                            <span class="font-12 color-darker-grey fw-500">Kodluyoruz Patika.dev B...</span>
+                        </div>
+                        <div class="group px-3 cursor-pointer mb-1 grey-hover">
+                            <i class="fa-solid fa-users font-12 color-darker-grey fw-500 opacity-0"></i>
+                            <span class="font-12 fw-500 color-darker-grey cursor-pointer">See all</span>
+                        </div>
+                    </div>
+
+                    <div class="events-bottom d-flex align-items-center justify-content-between px-3 mt-3">
+                        <span class="font-12 fw-500 link-color link-hover cursor-pointer">Events</span>
+                        <i class="follow-plus fa-solid fa-plus color-darker-grey font-16 p-2 grey-hover rounded-circle cursor-pointer"></i>
+                    </div>
+
+                    <span class="font-12 fw-500 link-color link-hover cursor-pointer px-3">Followed Hashtags</span>
+
+                    <span class="border-top color-darker-grey fw-500 d-flex justify-content-center p-3 grey-hover cursor-pointer">Discover more</span>
+
+                </div>
+            </div>
+            <!--POSTS SECTION-->
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <!--START A POST-->
+                <div id="create-post" class="card pt-3 px-3 border br-10">
+                    <div id="create-top" class="d-flex align-items-center gap-3">
+                        <img src="materials/user-1.png" class="rounded-circle border-2" width="48">
+                        <div id="start" class="py-3 rounded-pill border cursor-pointer grey-hover ">
+                            <span class="color-grey fw-500 ms-3">Start a post</span>
+                        </div>
+                    </div>
+                    <div id="create-bottom" class="d-flex align-items-center justify-content-between gap-md-1 gap-lg-5 mt-1 p-2">
+                        <div class="cursor-pointer grey-hover py-3 rounded-3 d-flex align-items-center gap-3 p-2">
+                            <i class="fa-regular fa-image start-icons" style="color: rgb(0, 183, 255);"></i>
+                            <span class="color-grey fw-500">Photo</span>
+                        </div>
+                        <div class="cursor-pointer grey-hover py-3 rounded-3 d-flex align-items-center gap-3 p-2">
+                            <i class="fa-solid fa-play start-icons"></i>
+                            <span class="color-grey fw-500">Video</span>
+                        </div>
+                        <div class="cursor-pointer grey-hover py-3 rounded-3 d-flex align-items-center gap-3 p-2">
+                            <i class="fa-regular fa-calendar start-icons"></i>
+                            <span class="color-grey fw-500">Event</span>
+                        </div>
+                        <div class="cursor-pointer grey-hover py-3 rounded-3 d-flex align-items-center gap-3 p-2">
+                            <i class="fa-regular fa-newspaper start-icons"></i>
+                            <span class="color-grey fw-500">Write Article</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 cursor-pointer my-1">
+                    <div id="line"></div>
+                    <span class="font-12 color-grey">Sort By: <span class="font-12 fw-500 color-black">Top</span></span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+
+                <!--POSTS-->
+                <div class="all-posts">
+                    <!--A post about a person-->
+                    <div class="card pt-3 border br-10 mb-3">
+                        <div class="post-top d-flex align-items-start justify-content-between gap-3 px-3">
+                            <div class="post-top-left d-flex align-items-start gap-3">
+                                <img src="materials/user-4.png" class="rounded-circle" width="48">
+                                <div class="post-top-middle d-flex flex-column align-items-start gap-0">
+                                    <span class="fw-500 link-hover cursor-pointer">Tuna Kokarcali</span>
+                                    <span class="color-grey font-12 cursor-pointer">Data Analyst at Google</span>
+                                    <span class="color-grey font-12 cursor-pointer">1w · <i class="fa-solid fa-earth-americas color-grey   "></i></span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis color-grey cursor-pointer grey-hover p-2 rounded-circle"></i>
+                        </div>
+                        <!--Post Text-->
+                        <p class="mt-1 mb-2 px-3">I am happy to announce that I've joined Google as a Data Analyst!</p>
+                        <!--Post Image-->
+                        <img src="materials/google.jpg" class="card-img px-0 rounded-0">
+                        <!--Like and Comment Counters-->
+                        <div class="likes d-flex align-items-center justify-content-between mt-2 mb-2 px-3">
+                            <div class="likes-left d-flex align-items-center gap-2">
+                                <div class="like-icons d-flex align-items-center">
+                                    <i class="fa-solid fa-thumbs-up font-10 rounded-circle p-1 d-flex align-items-baseline  " style="background-color: #378fe9; color: #fff;"></i>
+                                    <i class="fa-solid fa-heart font-10 rounded-circle p-1" style="background-color: #df704d; color: #fff;"></i>
+                                    <i class="fa-solid fa-hands-clapping font-10 rounded-circle p-1" style="background-color: #6dae4f; color: #fff;"></i>
+                                </div>
+                                <span class="like-people comment-hover font-12 color-grey">Egemen Tosunbas and 5,090 others</span>
+                            </div>
+                            <span class="comment-hover font-12 color-grey">33 comments</span>
+                        </div>
+                        <!--A line between counters and buttons-->
+                        <div class="mx-3 border-bottom"></div>
+                        <!--Interacting with the post-->
+                        <div class="post-bottom d-flex align-items-center justify-content-between px-4 mb-1">
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-thumbs-up color-grey font-16"></i>
+                                <span class="color-grey fw-500">Like</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-comment color-grey font-16"></i>
+                                <span class="color-grey fw-500">Comment</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-share color-grey font-16"></i>
+                                <span class="color-grey fw-500">Share</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-paper-plane color-grey font-16"></i>
+                                <span class="color-grey fw-500">Send</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--A post about a Person-->
+                    <div class="card pt-3 border br-10 mb-3">
+                        <div class="post-top d-flex align-items-start justify-content-between gap-3 px-3">
+                            <div class="post-top-left d-flex align-items-start gap-3">
+                                <img src="materials/user-5.png" class="rounded-circle" width="48">
+                                <div class="post-top-middle d-flex flex-column align-items-start gap-0">
+                                    <span class="fw-500 link-hover cursor-pointer">Turancan Erdem</span>
+                                    <span class="color-grey font-12 cursor-pointer">Junior Software Development Engineer</span>
+                                    <span class="color-grey font-12 cursor-pointer">1w · <i class="fa-solid fa-earth-americas color-grey   "></i></span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis color-grey cursor-pointer grey-hover p-2 rounded-circle"></i>
+                        </div>
+                        <!--Post Text-->
+                        <p class="mt-1 mb-2 px-3">
+                            Today is an important milestone for my life. I've decided to quit my job at Microsoft and be a digital nomad instead. I just want to travel the world and do the thing I love!
+                        </p>
+                        <!--Post Image-->
+                        <img src="materials/post-image-cat.jpg" class="card-img px-0 rounded-0">
+                        <!--Like and Comment Counters-->
+                        <div class="likes d-flex align-items-center justify-content-between mt-2 mb-2 px-3">
+                            <div class="likes-left d-flex align-items-center gap-2">
+                                <div class="like-icons d-flex align-items-center">
+                                    <i class="fa-solid fa-heart font-10 rounded-circle p-1" style="background-color: #df704d; color: #fff;"></i>
+                                    <i class="fa-solid fa-thumbs-up font-10 rounded-circle p-1 d-flex align-items-baseline  " style="background-color: #378fe9; color: #fff;"></i>
+                                    <i class="fa-solid fa-hands-clapping font-10 rounded-circle p-1" style="background-color: #6dae4f; color: #fff;"></i>
+                                </div>
+                                <span class="like-people comment-hover font-12 color-grey">Lamia Demirok and 410 others</span>
+                            </div>
+                            <span class="comment-hover font-12 color-grey">17 comments</span>
+                        </div>
+                        <!--A line between counters and buttons-->
+                        <div class="mx-3 border-bottom"></div>
+                        <!--Interacting with the post-->
+                        <div class="post-bottom d-flex align-items-center justify-content-between px-4 mb-1">
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-thumbs-up color-grey font-16"></i>
+                                <span class="color-grey fw-500">Like</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-comment color-grey font-16"></i>
+                                <span class="color-grey fw-500">Comment</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-share color-grey font-16"></i>
+                                <span class="color-grey fw-500">Share</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-paper-plane color-grey font-16"></i>
+                                <span class="color-grey fw-500">Send</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--A post about NETFLIX-->
+                    <div class="card pt-3 border br-10 mb-3">
+                        <div class="post-top d-flex align-items-start justify-content-between gap-3 px-3">
+                            <div class="post-top-left d-flex align-items-start gap-3">
+                                <img src="materials/netflix.png" class="" width="48">
+                                <div class="post-top-middle d-flex flex-column align-items-start gap-0">
+                                    <span class="fw-500 link-hover cursor-pointer">Netflix</span>
+                                    <span class="color-grey font-12 cursor-pointer">8,180,249 followers</span>
+                                    <span class="color-grey font-12 cursor-pointer">35m · <i class="fa-solid fa-earth-americas color-grey"></i></span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis color-grey cursor-pointer grey-hover p-2 rounded-circle"></i>
+                        </div>
+                        <!--Post Text-->
+                        <p class="mt-1 mb-2 px-3">
+                            The 2022 Netflix Movie Preview is here! Check out some of the biggest films featuring your favorite stars, all coming to Netflix this year. Because in here, every night is movie night.
+                            <span class="link-color link-hover fw-500 cursor-pointer"> #NetflixMovies2022</span>
+                        </p>
+                        <!--Post Image-->
+                        <img src="materials/post-image-netflix.jpg" class="card-img px-0 rounded-0">
+                        <!--Like and Comment Counters-->
+                        <div class="likes d-flex align-items-center justify-content-between mt-2 mb-2 px-3">
+                            <div class="likes-left d-flex align-items-center gap-1">
+                                <div class="like-icons d-flex align-items-center">
+                                    <i class="fa-solid fa-thumbs-up font-10 rounded-circle p-1 d-flex align-items-baseline  " style="background-color: #378fe9; color: #fff;"></i>
+                                    <i class="fa-solid fa-hands-clapping font-10 rounded-circle p-1" style="background-color: #6dae4f; color: #fff;"></i>
+                                    <i class="fa-solid fa-heart font-10 rounded-circle p-1" style="background-color: #df704d; color: #fff;"></i>
+                                </div>
+                                <span class="like-people comment-hover font-12 color-grey">374</span>
+                            </div>
+                            <span class="comment-hover font-12 color-grey">5 comments</span>
+                        </div>
+                        <!--A line between counters and buttons-->
+                        <div class="mx-3 border-bottom"></div>
+                        <!--Interacting with the post-->
+                        <div class="post-bottom d-flex align-items-center justify-content-between px-4 mb-1">
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-thumbs-up color-grey font-16"></i>
+                                <span class="color-grey fw-500">Like</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-comment color-grey font-16"></i>
+                                <span class="color-grey fw-500">Comment</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-share color-grey font-16"></i>
+                                <span class="color-grey fw-500">Share</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 p-3 cursor-pointer rounded-3 grey-hover mt-1">
+                                <i class="fa-solid fa-paper-plane color-grey font-16"></i>
+                                <span class="color-grey fw-500">Send</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-0 col-lg-4 d-none d-lg-block">
+                <div class="right-sticky mt-1 mx-5 border br-10" style="background-color: #fff;">
+                    <div class="d-flex align-items-center justify-content-between px-3 mb-3 mt-3">
+                        <span class="fw-500 font-16 ">Add to your feed</span>
+                        <i class="fa-solid fa-circle-info cursor-pointer"></i>
+                    </div>
+                    <!--RECOMMENDATIONS-->
+                    <div class="recommendations">
+                        <!--A RECOMMENDATION-->
+                        <div class="recommendation d-flex gap-3 ms-4 mt-3">
+                            <img src="materials/meta-logo.png" height="32">
+                            <div class="rec-details d-flex flex-column cursor-pointer">
+                                <span class="fw-500">Meta</span>
+                                <span class="font-12 color-grey">Company • Internet</span>
+                                <button class="btn border-thick rounded-pill follow-hover px-3 py-1 mt-2" style="width: 100px;">
+                                    <i class="follow-plus fa-solid fa-plus color-darker-grey"></i>
+                                    <span class="follow-text font-16 fw-500 color-darker-grey"> Follow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!--A RECOMMENDATION-->
+                        <div class="recommendation d-flex gap-3 ms-4 mt-3">
+                            <img src="materials/github-logo.png" height="32">
+                            <div class="rec-details d-flex flex-column cursor-pointer">
+                                <span class="fw-500">Github</span>
+                                <span class="font-12 color-grey">Company • Computer Software</span>
+                                <button class="btn border-thick rounded-pill follow-hover px-3 py-1 mt-2" style="width: 100px;">
+                                    <i class="follow-plus fa-solid fa-plus color-darker-grey"></i>
+                                    <span class="follow-text font-16 fw-500 color-darker-grey"> Follow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!--A RECOMMENDATION-->
+                        <div class="recommendation d-flex gap-3 ms-4 mt-3">
+                            <img src="materials/apple-logo.png" height="32">
+                            <div class="rec-details d-flex flex-column cursor-pointer">
+                                <span class="fw-500">Apple</span>
+                                <span class="font-12 color-grey">Company • Consumer Electronics</span>
+                                <button class="btn border-thick rounded-pill follow-hover px-3 py-1 mt-2" style="width: 100px;">
+                                    <i class="follow-plus fa-solid fa-plus color-darker-grey"></i>
+                                    <span class="follow-text font-16 fw-500 color-darker-grey"> Follow</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <span class="ms-4 my-3 d-flex align-items-center gap-1 color-grey fw-500 cursor-pointer">
+                        View all recommendations
+                        <i class="fa-solid fa-arrow-right color-darker-grey"></i>
+                    </span>
+                </div>
+                <div id="sticky-right-sidebar" class="d-flex align-items-center flex-column">
+                    <p class="sticky-links w-50 text-center mt-3">
+                        <span class="font-12 color-grey link-hover cursor-pointer px-2">About</span>
+                        <span class="font-12 color-grey link-hover cursor-pointer px-2">Accessibility</span>
+                        <span class="font-12 color-grey link-hover cursor-pointer px-2">Help Center</span>
+                        <span class="font-12 color-grey link-hover cursor-pointer px-2">
+                            Privacy & Terms
+                            <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                        <span class="font-12 color-grey link-hover cursor-pointer">Ad Choices</span>
+                        <span class="font-12 color-grey link-hover cursor-pointer">Advertising</span>
+                        <span class="font-12 color-grey link-hover cursor-pointer">
+                            Business Services
+                            <i class="fa-solid fa-angle-down"></i>
+                        </span><br>
+                        <span class="font-12 color-grey link-hover cursor-pointer">Get the LinkedIn app</span>
+                        <span class="font-12 color-grey link-hover cursor-pointer">More</span>
+                    </p>
+                    <div class="linkedin-author d-flex align-items-center gap-1">
+                        <img src="materials/linkedin-full-logo.png" width="60">
+                        <span class="font-12">LinkedIn Corporation © 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script>
+            $(document).ready(() => {
+                $(".premium").hover(
+                    () => {
+                        $(".premium").css("background", "rgb(230, 230, 230)");
+                    },
+                    () => {
+                        $(".premium").css("background", "transparent");
+                    }
+                )
+                $(".premium").hover(
+                    () => {
+                        $("#premium-text").css("color", "rgb(5, 125, 236)")
+                    },
+                    () => {
+                        $("#premium-text").css("color", "black")
+                    }
+                )
+            })
+        </script>
+
+</body>
+
+</html>
